@@ -5,6 +5,7 @@ const Header = () => {
             <h2>This is a header with navbar!</h2>
             <nav className="m-4 p-4 text-xl ">
                 <Link className="p-4 m-4 bg-teal-300" to="/">Home</Link>
+                <Link className="p-4 m-4 bg-teal-300" to="/posts">Posts</Link>
                 <Link className="p-4 m-4 bg-teal-300" to="/users">Users</Link>
                 <Link className="p-4 m-4 bg-teal-300" to="/about">About</Link>
                 <Link className="p-4 m-4 bg-teal-300" to="/contact">Contact</Link>
