@@ -6,8 +6,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from "./components/Header/Header";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
-// import Users from "./components/Users/Users";
-// import UserDetails from "./components/UserDetails/UserDetails";
+import Users from "./components/Users/Users";
+import UserDetails from "./components/UserDetails/UserDetails";
 // import Post from "./components/Post/Post";
 import Posts from "./components/Posts/Posts";
 import PostDetails from "./components/PostDetails/PostDetails";
@@ -28,23 +28,16 @@ const router = createBrowserRouter([
         path:'/contact',
         element:<Contact></Contact>
       },
-      // {
-      //   path:'/users',
-      //   loader:()=>fetch('https://jsonplaceholder.typicode.com/users'),
-      //   element:<Users></Users>
-      // },
-      // {
-      //   path:'/user/:userId',
-      //   loader:({params})=>fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
-      //   element:<UserDetails></UserDetails>
-      // },
-
-
-
-
-
-
-
+      {
+        path:'/users',
+        loader:()=>fetch('https://jsonplaceholder.typicode.com/users'),
+        element:<Users></Users>
+      },
+      {
+        path:'/user/:userId',
+        loader:({params})=>fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
+        element:<UserDetails></UserDetails>
+      },
 
       {
         path:'/posts',
